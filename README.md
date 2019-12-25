@@ -1,2 +1,2 @@
-# spider-cluster-template
-The base template for Scrapy projects.
+# Spider Cluster Template
+The base template for Scrapy projects, containing the initial setup and files.
