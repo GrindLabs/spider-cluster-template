@@ -16,4 +16,4 @@ mongoengine = "*"
 pyyaml = "*"
 
 [requires]
-python_version = "{{cookiecutter.pipenv.python_version}}"
+python_version = "{{cookiecutter.pipenv_python_version}}"

@@ -73,13 +73,13 @@ TELNETCONSOLE_ENABLED = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    '{{cookiecutter.project_slug}}.middlewares.{{cookiecutter.scrapy.project_main_class}}SpiderMiddleware': 543,
+#    '{{cookiecutter.project_slug}}.middlewares.{{cookiecutter.scrapy_project_main_class}}SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    '{{cookiecutter.project_slug}}.middlewares.{{cookiecutter.scrapy.project_main_class}}DownloaderMiddleware': 543,
+#    '{{cookiecutter.project_slug}}.middlewares.{{cookiecutter.scrapy_project_main_class}}DownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -91,7 +91,7 @@ TELNETCONSOLE_ENABLED = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    '{{cookiecutter.project_slug}}.pipelines.{{cookiecutter.scrapy.project_main_class}}Pipeline': 300,
+#    '{{cookiecutter.project_slug}}.pipelines.{{cookiecutter.scrapy_project_main_class}}Pipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
