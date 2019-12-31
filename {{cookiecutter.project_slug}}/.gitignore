@@ -17,3 +17,4 @@ log/*
 
 # Ignore files
 *.pyc
+*.egg
