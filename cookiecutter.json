@@ -3,6 +3,6 @@
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '') }}",
     "project_description": "The project description",
     "scrapy_project_main_class": "DefaultProject",
-    "scrapy_deploy_url": "http://localhost:6800",
+    "scrapy_deploy_url": "http://localhost:6800/addversion.json",
     "pipenv_python_version": "3.8"
 }
