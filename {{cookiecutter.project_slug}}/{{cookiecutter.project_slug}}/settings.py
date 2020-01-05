@@ -8,6 +8,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import logging
 import os
 
 import yaml
@@ -30,10 +31,13 @@ logger_path = os.path.join(os.path.dirname(__file__), '../logger.yaml')
 
 with open(logger_path, 'r') as file:
     logger_config = yaml.safe_load(file.read())
-    configure_logging(logger_config, False)
+    logging.config.dictConfig(logger_config)
 
-LOG_ENABLED = True
-LOG_LEVEL = 'development' if DEBUG else 'production'
+logger = logging.getLogger('development' if DEBUG else 'production')
+
+# Disable default log
+LOG_ENABLED = False
+configure_logging(install_root_handler=False)
 
 BOT_NAME = '{{cookiecutter.project_slug}}'
 
