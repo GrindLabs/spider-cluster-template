@@ -1,2 +1,3 @@
-# {{cookiecutter.project_name}}
-{{cookiecutter.project_description}}
+# Spider Cluster Template
+
+This is the base template for scrapy projects.
