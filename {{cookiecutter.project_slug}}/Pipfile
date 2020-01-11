@@ -12,7 +12,7 @@ fabric = "*"
 scrapy = "*"
 requests = "*"
 prettyconf = "*"
-mongoengine = "*"
+pymongo = "*"
 pyyaml = "*"
 
 [requires]

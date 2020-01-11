@@ -1,5 +1,7 @@
 import scrapy
+from pymongo import MongoClient
 
+from {{cookiecutter.project_slug}} import settings
 from {{cookiecutter.project_slug}}.settings import logger
 
 
@@ -12,12 +14,13 @@ class DefaultSpider(scrapy.Spider):
     """
     name = 'default'
 
-    def start_requests(self):
-        # TODO: The lookup URLs must come from the database
-        urls = []
-
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+    def __init__(self, *args, **kwargs):
+        super(DefaultSpider, self).__init__(*args, **kwargs)
+        self.client = MongoClient(settings.MONGODB_CONN_URI)
+        self.db = self.client.get_database(settings.MONGODB_DB_NAME)
+        # self.start_urls = <the URLs must come from the database>
+        # self.allowed_domains = <the domain list must come from the database>
+        self.client.close()
 
     def parse(self, response):
         pass

@@ -6,6 +6,8 @@
 
 # Ignore non-hidden folders
 __pycache__/
+build/
+dist/
 log/*
 
 # Accept files from ignored folders
@@ -18,3 +20,4 @@ log/*
 # Ignore files
 *.pyc
 *.egg
+*.egg-info
