@@ -1,0 +1,11 @@
+version: "2"
+services:
+  scrapyd:
+    container_name: scrapyd
+    image: alexandresgf/scrapyd-service:1.0.6
+    environment:
+      SCRAPYD_PROJECT_NAME: {{cookiecutter.project_slug}}
+    ports:
+      - 6800:6800
+    volumes:
+      - .:${HOME}

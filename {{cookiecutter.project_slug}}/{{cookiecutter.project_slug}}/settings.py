@@ -10,29 +10,27 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 import logging
 import os
+import pkgutil
 
 import yaml
-from prettyconf import config
+from dotenv import load_dotenv
 from scrapy.utils.log import configure_logging
 
+# Load the environment file
+load_dotenv('config/.env')
 # Setup the environment
-DEBUG = config('DEBUG', cast=config.boolean)
-
-# MongoDB setup
-MONGODB_CONN_URI = config('MONGODB_CONN_URI')
-MONGODB_DB_HOST = config('MONGODB_DB_HOST')
-MONGODB_DB_PORT = config('MONGODB_DB_PORT')
-MONGODB_DB_NAME = config('MONGODB_DB_NAME')
-MONGODB_DB_USER = config('MONGODB_DB_USER')
-MONGODB_DB_PASS = config('MONGODB_DB_PASS')
+DEBUG = int(os.getenv('DEBUG')) == 1 if os.getenv('DEBUG') else True
+# Setup MongoDB
+MONGODB_CONN_URI = os.getenv('MONGODB_CONN_URI')
+MONGODB_DB_HOST = os.getenv('MONGODB_DB_HOST')
+MONGODB_DB_PORT = os.getenv('MONGODB_DB_PORT')
+MONGODB_DB_NAME = os.getenv('MONGODB_DB_NAME')
+MONGODB_DB_USER = os.getenv('MONGODB_DB_USER')
+MONGODB_DB_PASS = os.getenv('MONGODB_DB_PASS')
 
 # Logging setup
-logger_path = os.path.join(os.path.dirname(__file__), '../logger.yaml')
-
-with open(logger_path, 'r') as file:
-    logger_config = yaml.safe_load(file.read())
-    logging.config.dictConfig(logger_config)
-
+logger_config = pkgutil.get_data('scrapydtest', 'config/logger.yaml')
+logging.config.dictConfig(yaml.safe_load(logger_config))
 logger = logging.getLogger('development' if DEBUG else 'production')
 
 # Disable default log

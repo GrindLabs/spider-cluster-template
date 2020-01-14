@@ -8,11 +8,9 @@
 __pycache__/
 build/
 dist/
-log/*
 
 # Accept files from ignored folders
 !.vscode/settings.json
-!log/.gitkeep
 
 # Ignore setup files
 *.env
