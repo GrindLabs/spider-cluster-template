@@ -4,6 +4,6 @@
     "project_description": "The project description",
     "scrapy_project_main_class": "DefaultProject",
     "scrapy_deploy_url": "http://localhost:6800/",
-    "scrapyd_service_version": "1.1.0",
+    "scrapyd_service_version": "latest",
     "pipenv_python_version": "3.8"
 }
