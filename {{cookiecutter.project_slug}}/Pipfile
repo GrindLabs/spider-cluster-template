@@ -11,7 +11,7 @@ fabric = "*"
 [packages]
 scrapy = "*"
 requests = "*"
-prettyconf = "*"
+python-dotenv = "*"
 pymongo = "*"
 pyyaml = "*"
 
