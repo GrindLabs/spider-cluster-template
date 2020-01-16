@@ -8,4 +8,4 @@ services:
     ports:
       - 6800:6800
     volumes:
-      - .:${HOME}/{{cookiecutter.project_slug}}
+      - .:/home/spidercluster/{{cookiecutter.project_slug}}
