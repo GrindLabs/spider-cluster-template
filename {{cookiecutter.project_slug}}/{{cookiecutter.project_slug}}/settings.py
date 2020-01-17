@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 from scrapy.utils.log import configure_logging
 
 # Load the environment file
-env_vars = pkgutil.get_data('streamerbot', 'config/.env')
+env_vars = pkgutil.get_data('{{cookiecutter.project_slug}}', 'config/.env')
 load_dotenv(stream=StringIO(env_vars.decode('utf-8')))
 # Setup the environment
 DEBUG = int(os.getenv('DEBUG')) == 1 if os.getenv('DEBUG') else True
@@ -31,7 +31,7 @@ MONGODB_DB_USER = os.getenv('MONGODB_DB_USER')
 MONGODB_DB_PASS = os.getenv('MONGODB_DB_PASS')
 
 # Logging setup
-logger_config = pkgutil.get_data('scrapydtest', 'config/logger.yaml')
+logger_config = pkgutil.get_data('{{cookiecutter.project_slug}}', 'config/logger.yaml')
 logging.config.dictConfig(yaml.safe_load(logger_config))
 logger = logging.getLogger('development' if DEBUG else 'production')
 

@@ -22,7 +22,7 @@ handlers:
     class: logging.handlers.TimedRotatingFileHandler
     level: INFO
     formatter: default
-    filename: ${HOME}/logs/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.log
+    filename: logs/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.log
     when: midnight
     backupCount: 5
     encoding: utf8
