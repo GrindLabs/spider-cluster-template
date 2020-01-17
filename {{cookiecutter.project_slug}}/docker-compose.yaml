@@ -5,6 +5,7 @@ services:
     image: alexandresgf/scrapyd-service:{{cookiecutter.scrapyd_service_version}}
     environment:
       SCRAPYD_PROJECT_NAME: {{cookiecutter.project_slug}}
+      HOME: ${HOME}
     ports:
       - 6800:6800
     volumes:
