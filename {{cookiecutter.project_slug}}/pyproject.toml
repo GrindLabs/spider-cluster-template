@@ -1,0 +1,14 @@
+[tool.flake8]
+ignore = ["E501"]
+max-line-length = {{cookiecutter.project_max_line_length}}
+
+[tool.black]
+line-length = {{cookiecutter.project_max_line_length}}
+target-version = ["py{{cookiecutter.python_min_version.replace('.', '')}}"]
+
+[tool.isort]
+profile = "black"
+skip = [".gitkeep", ".json"]
+line-length = {{cookiecutter.project_max_line_length}}
+src_paths = ["{{cookiecutter.project_slug}}"]
+py_version = {{cookiecutter.python_min_version.replace('.', '')}}

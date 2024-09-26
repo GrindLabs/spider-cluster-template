@@ -1,9 +1,13 @@
 {
     "project_name": "Default Project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '') }}",
-    "project_description": "The project description",
-    "scrapy_project_main_class": "DefaultProject",
-    "scrapy_deploy_url": "http://localhost:6800/",
-    "scrapyd_service_version": "latest",
-    "pipenv_python_version": "3.8"
+    "project_url": "https://www.example.com/path/to/project",
+    "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '_')}}",
+    "project_description": "The default project description",
+    "project_version": "1.0.0",
+    "project_author": "Default Owner Name",
+    "project_author_email": "contact@author.com",
+    "project_max_line_length": 150,
+    "scrapy_main_class": "{{cookiecutter.project_name.replace(' ', '')}}",
+    "scrapyd_deploy_url": "http://localhost:6800/",
+    "python_min_version": "3.11"
 }

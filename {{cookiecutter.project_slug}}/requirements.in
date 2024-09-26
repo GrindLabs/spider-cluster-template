@@ -1,0 +1,14 @@
+# Scrapy core
+scrapy==2.11.2
+
+# Scrapy plugins
+scrapy-jsonschema==0.5.0
+scrapy-deltafetch==2.0.1
+spidermon==1.22.0
+
+# HTTP
+requests==2.31.0
+
+# Parsers
+jmespath==1.0.1
+beautifulsoup4==4.12.3

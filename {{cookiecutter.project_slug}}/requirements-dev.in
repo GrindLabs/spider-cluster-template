@@ -1,0 +1,9 @@
+# Linter
+flake8==7.1.1
+flake8-pyproject==1.2.3
+
+# Code formatter
+black==24.8.0
+
+# Import sorter
+isort==5.13.2
